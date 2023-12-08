@@ -10,6 +10,7 @@ global.minesweeperGames = {};
 
 const renderComponent = (element) => {
   const preset = element.getAttribute('data-preset');
+  const tileSize = parseInt(element.getAttribute('data-tile-size')) || 16;
 
   const game = create({preset: preset});
 
@@ -31,7 +32,7 @@ const renderComponent = (element) => {
     poll();
   }
 
-  render(<Game game={game} />, element);
+  render(<Game tileSize={tileSize} game={game} />, element);
 };
 
 each(document.getElementsByClassName("minesweeper-game"), renderComponent);

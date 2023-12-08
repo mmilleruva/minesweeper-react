@@ -58,8 +58,12 @@ class Cell extends React.Component {
   }
 
   render() {
+    const style = {
+      height: this.props.tileSize,
+      width: this.props.tileSize
+    }
     const className = `${styles.field} ${this.state.style}`;
-    return <td onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} onDoubleClick={this.onDoubleClick} onContextMenu={this.onRightClick} onTouchEnd={this.onTouchEnd} onTouchStart={this.onTouchStart} className={className} />;
+    return <td style={style} onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} onDoubleClick={this.onDoubleClick} onContextMenu={this.onRightClick} onTouchEnd={this.onTouchEnd} onTouchStart={this.onTouchStart} className={className} />;
   }
 }
 
