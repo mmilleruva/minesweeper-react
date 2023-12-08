@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require mocha-compilers.js --require mocha-init.js 'src/**/*-spec.*' && eslint src --ext .js,.jsx",
-    "dist": "webpack --config webpack.config-prod.js -p"
+    "dist": "webpack --config webpack.config-prod.js -p",
+    "watch": "./bin/watch"
   },
   "repository": {
     "type": "git",
